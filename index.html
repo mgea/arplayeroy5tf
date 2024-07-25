@@ -1,55 +1,260 @@
-<!doctype html>
-<html>
-    <head>
-        <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-        <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 
+      This is an HTML comment
+      You can write text in a comment and the content won't be visible in the page
+    -->
 
-        <!---- add this for animated gltf --->
-        <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    
+    <!---- fonts Kalnia Glaze ---->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&display=swap" rel="stylesheet">
+    
+    
+    <!----- Raleway ---->
+    
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    
+    
+    
+  <link href="https://cdn.knightlab.com/libs/soundcite/latest/css/player.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="https://cdn.knightlab.com/libs/soundcite/latest/js/soundcite.min.js"></script>
+   
+    <!-- The website stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+    
+    <!-- The website JavaScript file -->
+    <script src="/script.js" defer></script>
+    
+
+    
+    <!---- audiofade --->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/AudioFade.js"></script>
+    <!---- wow.js --->
+     <link rel="stylesheet" href="/animate.css">
+     <script src="/wow.js"></script>
+   <script>
+    wow = new WOW(
+                      {
+                      boxClass:     'wow',      // default
+                      animateClass: 'animated', // default
+                      offset:       0,          // default
+                      mobile:       true,       // default
+                      live:         true        // default
+                    }
+                    )
+                    wow.init();
+
+  </script>
+ 
+  </head>
+  <body>
+  
+    
+    <!----  fuego   --->
+<audio loop id="audio1" src="https://cdn.glitch.global/fd83759d-cbd7-4028-91e0-63fbdc74dd9c/bach-cello-suite.mp3?v=1721762244391"></audio>
+
+
+<!----  agua   --->
+<audio loop id="audio2" src="https://cdn.pixabay.com/download/audio/2022/05/31/audio_707b47ce10.mp3"></audio>
+
+<!----  tierra   --->
+<audio loop id="audio3" src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_ad180669e0.mp3"></audio>
+
+<!----  viento   --->
+<audio loop id="audio4" src="https://cdn.pixabay.com/download/audio/2021/08/09/audio_ea914471ac.mp3"></audio>
+
+    
+    <!--
+      The body includes the content you see in the page
+      Each element is defined using tags, like this <div></div>
+      The attributes like class="wrapper" let us style elements in the CSS
+class="wrapper"
+    -->
+    <div class="contenido">
+    
+         <div class="destacado wow pulse" data-wow-iteration="infinite" data-wow-duration="1500ms"> Bodorrio </div>
+      
+      
+         <div class="destacado wow pulse" data-wow-iteration="infinite" data-wow-duration="1500ms"> el 23 de agosto del 2024 </div>
         
-    </head>
+        <div class="destacado">
+       <button id="button" style="margin: auto; ">
+  <i class="fas fa-play"></i> Dale al Play </button>
+          
+      </div>
+ 
+      
+       
+   
+      
+     
+      
+        <div class="destacado"> <br> ¡Nos casamos!</div>
+      
+    
+    
+        
+    
+      
+      
+   <div class="lienzo" >   <!---- animación ----> 
+     
+ <!---- corazones ---> 
+ <div class="el"></div>
+<div class="el"></div>
+<div class="el"></div>
+<div class="el"></div>
+<div class="el"></div>
+<div class="el"></div>
+<div class="el"></div>
+<div class="el"></div>
+<div class="el"></div>
+<div class="el"></div>
+<div class="el"></div>
+<div class="el"></div>
+<div class="el"></div>
+<div class="el"></div>
+<div class="el"></div>
+<div class="el"></div>
+<div class="el"></div>
+<div class="el"></div>
+<div class="el"></div>
+<div class="el"></div>
+<div class="el"></div>
+<div class="el"></div>
+<div class="el"></div>
+<div class="el"></div>
+<div class="el"></div>
+<div class="el"></div>
+<div class="el"></div>
+<div class="el"></div>
+<div class="el"></div>
+<div class="el"></div>
+<div class="el"></div>
+<div class="el"></div>
+        
+        
+        
+          <img class="alhambra"
+          src="https://cdn.glitch.global/fd83759d-cbd7-4028-91e0-63fbdc74dd9c/alhambra.jpg?v=1721766616496"
+          
+        /> 
+        <img class="girl"
+          src="https://cdn.glitch.global/fd83759d-cbd7-4028-91e0-63fbdc74dd9c/weding-girl.png?v=1721762837642"
+        
+        />
+      <div class="girlt">
+           Esther 
+           </div>
+        
+         <img class="boy"
+          src="https://cdn.glitch.global/fd83759d-cbd7-4028-91e0-63fbdc74dd9c/weding-man.png?v=1721762838186"
+          
+        /> 
+        <div class="boyt">
+           Miguel 
+           </div>
+          
+         
+      </div> <!---- lienzo ---->
+          
+    
+        
+    
+      
+  
+ 
+  
+<!---- bienvenidos ----> 
+ 
+      <section class="wow slideInLeft font_rale" data-wow-duration="2s" data-wow-delay="0s" style="position:absolute; width: 400px; top:800px;">
+         
+          <b>¡ Bienvenidos a la boda de Esther y Miguel ! </b> 
+        
+        Nos vemos en la <b> chumbera del Sacromonte el 23 de agosto a las 19:30 </b>.
+        
+         Aquí os dejamos una encuesta para que nos confirmes tu asistencia y si vienes con acompañantes. Tenemos que confirmar los asistentes una semana antes 
+        por lo que te agradecemos que lo rellenes antes del 15 de agosto. ¡Te esperamos al fresquito !
+        
+        <a href="https://wowjs.uk/"> Dale</a>
+          
+          <input type="button" style="background-color:yellow" onclick="location.href='https://google.com';" value="Rellena encuesta" />
+          
+        <button id="button_survey" style="margin: auto; ">
+  <i class="fas fa-check-square"></i> Dale al Play </button> 
+           
+        https://forms.gle/GuB77nYDSrruBNe98
+        
+        
+        
+     <img
+    class="img-bg"
+    src="https://lachumbera.com/wp-content/uploads/2014/12/004-Chumbera-Terraza-Alta-y-Parking.jpg"
+    style= "widht:400px; height:600px;">
+    </section>
+      
+      
+      <!---- esther ---> 
+      <section class="wow bounceInRight" data-wow-duration="2s" data-wow-delay="3s" style=" position:absolute; width: 120px;  top:1600px; ">
+          
+        <img src="https://cdn.glitch.global/fd83759d-cbd7-4028-91e0-63fbdc74dd9c/esther.png?v=1721934396763" style="width:100px; ">
+           
+          <img src="https://cdn.glitch.global/fd83759d-cbd7-4028-91e0-63fbdc74dd9c/mg.png?v=1721934399522" style="width:100px;  ">
+          <span class="soundcite below"  data-url="https://cdn.pixabay.com/download/audio/2021/02/06/audio_909a0c5006.mp3" data-start="0" data-end="164000" data-plays="1">listen</span>   
+      </section>
+     
+ 
+    
+     
+      
+      <section class="wow slideInRight font_rale" data-wow-duration="2s" data-wow-delay="0s" style="font:45px; position:absolute; width: 400px; top:1400px; ">
+          Y mientras llega este día, 
+   hemos creado esta web para que tengáis  toda la información necesaria y os sea más fácil disfrutar de ese día con nosotros. 
+          Recuerda que el acceso al Albaizín está restringido con coche. 
+        Se puede entrar antes de las 20h pero no es muy conveniente porque hay poca zona de aparcamiento. 
+        
+       
+          
 
-    <body style="margin: 0; overflow: hidden;">
-        <a-scene
-            vr-mode-ui="enabled: false;"
-            loading-screen="enabled: false;"
-            renderer="logarithmicDepthBuffer: true;"
-            arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
-            id="scene"
-            embedded
-            gesture-detector
-        >
-            <a-assets>
-                <a-asset-item
-                    id="animated-asset"
-                    src="assets/econejo.gltf"
-                ></a-asset-item>
-            </a-assets>
+ 
+        <br> 
+        Granada, julio del 2024
+            
+     
+     
+   
+        <img
+    class="img-bg"
+    src="https://lachumbera.com/wp-content/uploads/2014/12/029-Chumbera-Principal.jpg"
+    style= "widht:400px; height:600px;">
+         
+        
+      </section>
+   
+      
+ 
+    <!-- The footer holds our remix button — you can keep or delete it ✂ -->
+    
+  
+  
+  
+  
+  
 
-            <a-marker
-                id="animated-marker"
-                type="pattern"
-                preset="custom"
-                url="assets/marker.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
-            >
-                <a-entity
-                    id="bowser-model"
-                    scale="0.010995758220497871 0.010995758220497871 0.010995758220497871"
-                    animation-mixer="clip: mixamo.com; loop: repeat"
-                    gltf-model="#animated-asset"
-                    class="clickable"
-                    gesture-handler
-                ></a-entity>
-            </a-marker>
-
-            <a-entity camera></a-entity>
-        </a-scene>
-    </body>
+      
+    </div> <!----contenido --->
+  </body>
 </html>
