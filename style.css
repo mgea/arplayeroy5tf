@@ -1,0 +1,637 @@
+/******************************************************************************
+START Glitch hello-app default styles
+
+The styles in this section do some minimal CSS resets, set default fonts and 
+colors, and handle the layout for our footer and "Remix on Glitch" button. If
+you're new to CSS they may seem a little complicated, but you can scroll down
+to this section's matching END comment to see page-specific styles.
+******************************************************************************/
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&display=swap" rel="stylesheet">
+
+
+
+
+/* 
+  The style rules specify elements by type and by attributes such as class and ID
+  Each section indicates an element or elements, then lists the style properties to apply
+  See if you can cross-reference the rules in this file with the elements in index.html
+*/
+
+/* Our default values set as CSS variables */
+:root {
+  --color-bg: #e9f5ec;
+  --color-text-main: #000000;
+  --color-primary: #FFFF00;
+  --wrapper-height: 87vh;
+  --image-max-width: 300px;
+  --image-margin: 3rem;
+  --font-family: "HK Grotesk";
+  --font-family-header: "HK Grotesk";
+}
+
+/* Basic page style resets */
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+
+/* Import fonts */
+@font-face {
+  font-family: HK Grotesk;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
+    format("opentype");
+}
+@font-face {
+  font-family: HK Grotesk;
+  font-weight: bold;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
+    format("opentype");
+}
+
+/* Our remix on glitch button */
+.btn--remix {
+  font-family: HK Grotesk;
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+  line-height: 1rem;
+  font-weight: 500;
+  height: 2.75rem;
+  align-items: center;
+  cursor: pointer;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #000;
+  white-space: nowrap;
+  margin-left: auto;
+}
+.btn--remix img {
+  margin-right: 0.5rem;
+}
+.btn--remix:hover {
+  background-color: #D0FFF1;
+}
+
+/* Navigation grid */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem auto 0;
+  padding: 1rem 0 0.75rem 0;
+  width: 100%;
+  flex-wrap: wrap;
+  border-top: 4px solid #fff;
+}
+
+.footer a:not(.btn--remix):link,
+a:not(.btn--remix):visited {
+  font-family: HK Grotesk;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: #000;
+  text-decoration: none;
+  border-style: none;
+}
+.footer a:hover {
+  background: var(--color-primary);
+}
+
+.footer .links {
+  padding: 0.5rem 1rem 1.5rem;
+  white-space: nowrap;
+}
+
+.divider {
+  padding: 0 1rem;
+}
+/******************************************************************************
+END Glitch hello-app default styles
+******************************************************************************/
+
+body {
+  font-family: HK Grotesk;
+  background-color: var(--color-bg);
+}
+
+
+.contenido {
+  width: 400px;
+  margin: 0 auto;
+  display: block;
+  
+}
+
+
+/* Page structure */
+.wrapper {
+  min-height: var(--wrapper-height);
+  display: grid;
+  place-items: center;
+  margin: 0 1rem;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Very light scaling for our illustration */
+.title {
+  color: #2800FF;
+  font-family: HK Grotesk;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 100px;
+  line-height: 105%;
+  margin: 0;
+}
+
+/* Very light scaling for our illustration */
+.illustration {
+  max-width: 100%;
+  max-height: var(--image-max-width);
+  margin-top: var(--image-margin);
+}
+
+/* Instructions */
+.instructions {
+  margin: 1rem auto 0;
+}
+
+.lienzo {  /* de animación */
+  color: #2800FF;
+ /* display: relative; */
+  position:relative; 
+  top: 12fbutt
+    0px; 
+  
+}
+
+
+/* Button - Add it from the README instructions */
+button,
+input {
+  font-family: inherit;
+  font-size: 100%;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  transition: 500ms;
+}
+
+
+
+/* Subheading */
+h2 {
+  color: #2800FF;
+}
+
+/* Interactive image */
+.illustration:active {
+  transform: translateY(5px);
+}
+
+/* Button dip
+- Toggling this class on and off will move it down and up again
+- The button transition property above determines the speed of the translate (500ms)
+*/
+.dipped {
+  transform: translateY(5px);
+}
+
+/* Links that open files in the editor */
+.fileopener {
+  cursor:pointer;
+  font-weight:bold;
+  border-bottom:3px solid var(--color-primary);
+  color: var(--color-secondary);
+}
+.fileopener:hover {
+  border-bottom:3px solid var(--color-secondary);
+}
+
+
+
+
+.destacado {
+  font-family: "Kalnia Glaze", serif;
+  font-optical-sizing: auto;
+  font-weight: 20;
+  font-size: 45px;
+   text-align: center;
+  line-height: 1.6;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 200;
+}
+
+
+
+/**** animacion ***/ 
+
+
+.girl {
+ position: absolute; 
+  top:50px;
+  left:10px;  
+
+   height : 150px;
+  animation-name: animate-to-right;
+  animation-duration: 3s;
+   animation-iteration-count: infinite;
+  animation-direction: alternate; 
+   z-index: 12;
+/*	animation: example 25s linear infinite; */
+}
+
+
+
+.girlt {
+  position: absolute; 
+  top:200px;
+  left:30px; 
+   animation-name: animate-to-right;
+  animation-duration: 3s;
+   animation-iteration-count: 5;
+  animation-direction: alternate;
+   z-index: 12;
+   font-family: "Playwrite BE VLG", cursive;
+  color:blue;
+  font-size: 25px;
+/*	animation: example 25s linear infinite; */
+}
+
+
+
+.boy {
+   position: absolute; 
+  top:50px;
+  left:300px; 
+
+  /* top:300px;
+  right:10px; */
+  
+  height : 150px;
+  
+  animation-name: animate-to-left;
+  animation-duration: 3s;
+   animation-iteration-count: infinite;
+  animation-direction: alternate; 
+   z-index: 10;
+  
+  
+/*	animation: example 25s linear infinite; */
+}
+
+
+.boyt {
+  position: absolute; 
+  top:200px;
+  left:300px; 
+  
+  animation-name: animate-to-left;
+  animation-duration: 3s;
+   animation-iteration-count: 5;
+  animation-direction: alternate;
+  
+   z-index: 10;
+     font-family: "Playwrite BE VLG", cursive;
+  color:blue;
+  font-size: 25px;
+  
+  
+/*	animation: example 25s linear infinite; */
+}
+
+
+.soundcite {
+  
+   position: relative;
+   left:50%;
+/*  top: 200px; */
+  
+}
+
+
+
+
+
+.below {
+  
+  top:90px;
+  left:20px;
+  
+}
+
+
+
+/*** alinear animación con flexbox https://codepen.io/osublake/pen/dMLQJr ***/ 
+
+.flex-container.row {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+
+
+.alhambra {
+  position: absolute;
+  
+  top: 0px; 
+   animation: 26s fadein_alhambra;
+    opacity: 10;
+  width: 400px;
+  z-index: 1;
+  
+}
+
+@keyframes animate-to-right {
+	from { transform: translateX(-5px);}
+	to { transform: translatex(120px);}
+
+}
+
+
+
+@keyframes animate-to-left {
+	from { transform: translateX(5px);}
+	to { transform: translatex(-120px);}
+
+}
+
+
+
+
+
+
+@keyframes fadein_alhambra {
+	
+  0% {opacity: 0}
+  33.33% {opacity: 1}
+}
+
+
+
+
+/*****  HEarts https://codepen.io/NTIAKO/pen/zYbQmOZ ****/
+
+  .el {
+    width: 10px;
+    height: 10px;
+     z-index: 2;
+    position: absolute;
+    top: 5px;
+    left: 30px;
+    border-radius: 50%;
+    background-color: #f45f42;
+    offset-distance: 100%;
+    offset-path: path('m 211.619 15.642 c -137.447 -2.4711 -264.638 212.481 105.926 435.341 c 0.405975 -0.730988 1.96899 -0.730988 2.375 0 c 382.518 -230.049 234.665 -451.64 92.626 -434.391 c -55.373 6.7245 -81.504 37.4565 -93.814 63.888 c -12.309 -26.4315 -38.44 -57.1635 -93.813 -63.888 c -4.438 -0.539301 -8.86601 -0.8702 -13.3 -0.95 l 0 -0.0001 Z');
+    animation: move 6s 5 ease-in-out;  /* 5 VS infinite */
+    scale: 0.5; 
+  }
+  
+  @keyframes move {
+    100% {
+      offset-distance: 0;
+    }
+  }
+  
+  .el:nth-of-type(1) {
+    animation-delay: 0s;
+  }
+  
+  .el:nth-of-type(2) {
+    animation-delay: 0.2s;
+    background-color: #f44242;
+  }
+  
+  .el:nth-of-type(3) {
+    animation-delay: .4s;
+    background-color: #ffb2b2;
+  }
+  
+  .el:nth-of-type(4) {
+    animation-delay: .6s;
+  }
+  
+  .el:nth-of-type(5) {
+    animation-delay: .8s;
+  }
+  
+  .el:nth-of-type(6) {
+    animation-delay: 1s;
+  }
+  
+  .el:nth-of-type(7) {
+    animation-delay: 1.2s;
+  }
+  
+  .el:nth-of-type(8) {
+    animation-delay: 1.4s;
+  }
+  
+  .el:nth-of-type(9) {
+    animation-delay: 1.6s;
+  }
+  
+  .el:nth-of-type(10) {
+    animation-delay: 1.8s;
+  }
+  
+  .el:nth-of-type(11) {
+    animation-delay: 2s;
+    background-color: #ffb2b2;
+  }
+  
+  .el:nth-of-type(12) {
+    animation-delay: 2.2s;
+  }
+  
+  .el:nth-of-type(13) {
+    animation-delay: 2.4s;
+    background-color: #ffb2b2;
+  }
+  
+  .el:nth-of-type(14) {
+    animation-delay: 2.6s;
+  }
+  
+  .el:nth-of-type(15) {
+    animation-delay: 2.8s;
+  }
+  
+  .el:nth-of-type(16) {
+    animation-delay: 3s;
+  }
+  
+  .el:nth-of-type(17) {
+    animation-delay: 3.2s;
+  }
+  
+  .el:nth-of-type(18) {
+    animation-delay: 3.4s;
+  }
+  
+  .el:nth-of-type(19) {
+    animation-delay: 3.6s;
+    background-color: #ffb2b2;
+  }
+  
+  .el:nth-of-type(20) {
+    animation-delay: 3.8s;
+    background-color: #772f2f;
+  }
+  
+  .el:nth-of-type(21) {
+    animation-delay: 4s;
+  }
+  
+  .el:nth-of-type(22) {
+    animation-delay: 4.2s;
+  }
+  
+  .el:nth-of-type(23) {
+    animation-delay: 4.4s;
+  }
+  
+  .el:nth-of-type(24) {
+    animation-delay: 4.6s;
+  }
+  
+  .el:nth-of-type(25) {
+    animation-delay: 4.8s;
+    background-color: #772f2f;
+  }
+  
+  .el:nth-of-type(26) {
+    animation-delay: 5s;
+  }
+  
+  .el:nth-of-type(27) {
+    animation-delay: 5.2s;
+  }
+  
+  .el:nth-of-type(28) {
+    animation-delay: 5.4s;
+  }
+  
+  .el:nth-of-type(29) {
+    animation-delay: 5.6s;
+  }
+  
+  .el:nth-of-type(30) {
+    animation-delay: 5.8s;
+  }
+  
+  .el:nth-of-type(31) {
+    animation-delay: 6s;
+  }
+  
+  .el:nth-of-type(32) {
+    animation-delay: 6.2s;
+    background-color: #ffb2b2;
+  }
+  
+  p {
+    position: absolute;
+    top: 180px;
+    left: 220px;
+    font-size: 30px;
+    color: #f44242;
+    opacity: 0;
+  }
+  
+  .elo {
+    animation: elo 10s linear;
+  }
+  
+  .luvya {
+    animation: luvya 10s linear;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes elo {
+    40% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes luvya {
+    60% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+
+
+
+
+/***************** CHUMBERA **+*******/
+
+ .wow:first-child {
+      visibility: hidden;
+    }
+
+
+.chumbera {  /* localización */
+  color: #2800FF;
+ /* display: relative; */
+  position:relative; 
+  top: 150px; 
+   background-image: url("https://lachumbera.com/wp-content/uploads/2014/12/004-Chumbera-Terraza-Alta-y-Parking.jpg");
+background-size: 400px;
+  top: 400px;
+  opacity:0.3;
+}
+
+
+
+.parent {
+  position: relative;
+  width: 350px;
+  height: 100px;
+}
+
+.img-bg {
+  opacity: 0.2;
+  position: absolute;
+  width: 400px;
+  top:-50px;
+  left:0px;
+  object-fit: cover;
+}
+
+
+.font_rale {
+
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 250px;
+  line-height: 35px;
+  font-style: normal;
+  padding: 25px;
+}
+
+  
+}
+
